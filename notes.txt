@@ -1,0 +1,80 @@
+jobsense/
+│
+├── 📄 README.md
+├── 📄 .gitignore
+│
+├── 📁 frontend/                        (Next.js 14)
+│   ├── 📄 package.json
+│   ├── 📄 tsconfig.json
+│   ├── 📄 tailwind.config.ts
+│   ├── 📄 next.config.ts
+│   ├── 📄 .env.example
+│   │
+│   ├── 📁 app/                         (App Router)
+│   │   ├── 📄 layout.tsx               (root layout + fonts)
+│   │   ├── 📄 page.tsx                 (landing / redirect)
+│   │   ├── 📁 auth/
+│   │   │   ├── 📁 login/page.tsx
+│   │   │   └── 📁 register/page.tsx
+│   │   ├── 📁 dashboard/page.tsx       (stats overview)
+│   │   ├── 📁 tracker/page.tsx         (Kanban board)
+│   │   ├── 📁 analyze/page.tsx         (paste JD + upload resume)
+│   │   └── 📁 trends/page.tsx          (skill demand charts)
+│   │
+│   ├── 📁 components/
+│   │   ├── 📁 ui/                      (Button, Input, Card, Badge...)
+│   │   ├── 📁 layout/                  (Navbar, Sidebar, PageWrapper)
+│   │   └── 📁 charts/                  (SkillChart, MatchScoreRing...)
+│   │
+│   ├── 📁 lib/
+│   │   ├── 📄 api.ts                   (Axios client — already built ✅)
+│   │   └── 📄 utils.ts                 (cn(), formatDate()...)
+│   │
+│   ├── 📁 hooks/
+│   │   ├── 📄 useAuth.ts
+│   │   └── 📄 useApplications.ts
+│   │
+│   ├── 📁 types/
+│   │   └── 📄 index.ts                 (already built ✅)
+│   │
+│   └── 📁 public/                      (static assets)
+│
+│
+├── 📁 backend/                         (Flask / Python)
+│   ├── 📄 app.py                       (entry point — already built ✅)
+│   ├── 📄 requirements.txt             (already built ✅)
+│   ├── 📄 .env.example                 (already built ✅)
+│   │
+│   ├── 📁 routes/                      (HTTP handlers)
+│   │   ├── 📄 auth.py                  ✅ done
+│   │   ├── 📄 applications.py          ✅ done
+│   │   ├── 📄 resumes.py               (stub — Week 2)
+│   │   ├── 📄 analyses.py              (stub — Week 2)
+│   │   └── 📄 trends.py                (stub — Week 3)
+│   │
+│   ├── 📁 services/                    (business logic, not HTTP)
+│   │   ├── 📄 resume_parser.py         (Week 2 — pdfminer)
+│   │   ├── 📄 ai_analysis.py           (Week 2 — LangChain chains)
+│   │   └── 📄 trend_aggregator.py      (Week 3 — cron job)
+│   │
+│   ├── 📁 ml/                          (ML model code)
+│   │   ├── 📄 train.py                 (Week 3 — train scoring model)
+│   │   ├── 📄 predict.py               (Week 3 — serve predictions)
+│   │   ├── 📁 data/                    (raw JD/skill training data)
+│   │   └── 📁 saved_models/            (serialised .pkl files)
+│   │
+│   ├── 📁 models/                      (DB query helpers per table)
+│   │   ├── 📄 user.py
+│   │   ├── 📄 application.py
+│   │   └── 📄 analysis.py
+│   │
+│   ├── 📁 utils/
+│   │   ├── 📄 db.py                    ✅ done
+│   │   └── 📄 helpers.py               (validators, formatters)
+│   │
+│   └── 📁 uploads/                     (temp resume storage)
+│
+│
+└── 📁 database/
+    ├── 📄 schema.sql                   ✅ done
+    └── 📄 seed.sql                     (optional test data)
