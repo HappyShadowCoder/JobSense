@@ -1,5 +1,39 @@
+# ── Environment variables — NEVER commit these
 .env
-.txt
+.env.local
+.env.*.local
+
+# ── Python
 venv/
-.DS_Store
+.venv/
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Next.js
+frontend/.next/
+frontend/out/
+frontend/node_modules/
+
+# ── Uploads — never commit user files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ── ML model artefacts
+backend/ml/saved_models/*
+!backend/ml/saved_models/.gitkeep
+backend/ml/data/*.csv
+!backend/ml/data/.gitkeep
+
+# ── OS
+.DS_Store
+Thumbs.db
+
+# ── Editor
+.vscode/
+.idea/
+*.swp
+
+# ── Logs
+*.log
