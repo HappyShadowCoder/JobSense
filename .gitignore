@@ -45,3 +45,4 @@ backend/ml/saved_models/*
 *.npy
 backend/ml/data/*
 !backend/ml/data/.gitkeep
+*.csv
