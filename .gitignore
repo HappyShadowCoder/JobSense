@@ -37,3 +37,11 @@ Thumbs.db
 
 # ── Logs
 *.log
+
+# ── ML model artefacts
+backend/ml/saved_models/*
+!backend/ml/saved_models/.gitkeep
+*.pkl
+*.npy
+backend/ml/data/*
+!backend/ml/data/.gitkeep
