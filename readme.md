@@ -197,8 +197,8 @@ NEXTAUTH_SECRET=your-secret
 ## Build Roadmap
 
 - [x] **Week 1** — Auth, PostgreSQL schema, Job application tracker, Dashboard
-- [ ] **Week 2** — Resume upload, LangChain AI analysis, Skill gap feature
-- [ ] **Week 3** — ML scoring model, Skill trends dashboard
+- [x] **Week 2** — Resume upload, LangChain AI analysis, Skill gap feature
+- [x] **Week 3** — ML scoring model, Skill trends dashboard
 - [ ] **Week 4** — Deploy to Vercel + Render, real user testing
 
 ---
